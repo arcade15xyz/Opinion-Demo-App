@@ -1,6 +1,5 @@
 import { useActionState } from "react";
 
-
 export function NewOpinion() {
   function shareOpinionAction(prevState,formData){
     const title = formData.get('title');
@@ -30,6 +29,7 @@ export function NewOpinion() {
 
     return { errors:null }
   }
+
 
 
   const [formState,formAction,pending]=useActionState(shareOpinionAction,{errors:null});
